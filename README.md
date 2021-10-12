@@ -15,3 +15,7 @@ maxiter = max iterations of minimizer
 maxeval = max number of force/energy evaluations
 
 more info on https://docs.lammps.org/minimize.html
+
+I didn't find the wall fuction but with the region fuction i made it well.
+Thus i separated the particles A from the particles B (Bs are in the middle)
+At a distant of 4 sigmas
