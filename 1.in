@@ -37,6 +37,6 @@ thermo_style custom step ke pe etotal
 thermo       100
 run_style    verlet
 
-dump         1 all xyz 100 posicion2.xyz
+dump         1 all xyz 100 posicion1.xyz
 run          10000
 
