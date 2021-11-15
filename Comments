@@ -1,4 +1,23 @@
-I need to add the neigh function
+One box with xyz periodic boundaries. 
+
+I use the Leanard Jones potential. (lj126) (R_cut = 2.5)
+
+3 regions are created in the box, 2 types of atomic particles.
+
+Lattice 1 https://docs.lammps.org/lattice.html
+
+The energy, volumen and density are constants.
+The temperature as well.
+
+I use a verlet list. https://en.wikipedia.org/wiki/Verlet_list
+
+The thermo style prints: ke pe etotal press vol density.
+
+With the dump function, I use vmd 1.9.3 to visualize the simulation.
+https://docs.lammps.org/dump.html
+
+https://www.ks.uiuc.edu/Research/vmd/
+
 
 
 
