@@ -1,27 +1,19 @@
-variable E 
-# this is sigma of the wall  
-# Epsilon , Sigma = 1.0 , R_cut = 1.5
-# Region = soluto 
+pair_style    lj/cut 2.5 
 
-fix wall all wall/region soluto lj126 E 1.0 1.5
-
-# This command is for the wall force 
-
+pair_coeff    1 1 1.0  1.0
+pair_coeff    1 2 1.41 1.0
+pair_coeff    2 2 2.0  1.0
+mass          1 1.0
+mass          2 1.0
 
 
-group gsoluto type 2 
-# i create a group in order to use fix wall only with soluto
+R_cut = 2.5
 
-fix rwall2 gsoluto wall/reflect xhi 9.0 units box
-fix rwall1 gsoluto wall/reflect xlo 11.0 units box
+Sigma  = 1.0 
 
-# In these fix wall commands i need to specify the only group that feels the refelction.
+Epsilons:
+A - A:   = 1.0 
+A - B:   = 1.41 
+B - B:   = 2.0 
 
-
-# Up to 6 walls or faces can be specified in a single command: 
-# xlo, xhi, ylo, yhi, zlo, zhi. A lo face reflects particles that move to a coordinate less than the wall position, 
-# back in the hi direction. A hi face reflects particles that move to a coordinate higher than the wall position, back in the lo direction
-
-# units value = lattice or box
-# lattice = the wall position is defined in lattice units
-# box = the wall position is defined in simulation box units
+mass = 1.0
