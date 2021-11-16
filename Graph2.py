@@ -57,7 +57,7 @@ def data(r): # this argument is for the total lines which are within the log.lam
     return graph(temp, kee, pee, total)
  
 
-# run = 100000 , thermo = 100 
+# run = 100000 , thermo= 100 
 # the run is the final step, and the simulation run until 100000
 def stp(run, thermo): # with this ratio we have the final step, thermo is like the separation, every step is thermo*t; t = t + 1 (loop)
     step_t = run / thermo
