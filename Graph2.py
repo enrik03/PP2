@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 
 
-
 # first graph fun.
 def graph(step, ke, pe, etotal):
     # x = np.linspace(0, len(step))
@@ -22,7 +21,8 @@ def graph(step, ke, pe, etotal):
 mylines = []
 
 
-def data(r):  # this argument is for the total lines which are within the log.lammps file (The final line of the simulation updates)
+def data(
+        r):  # this argument is for the total lines which are within the log.lammps file (The final line of the simulation updates)
     with open('log.lammps', 'rt') as myfile:  # open the file which we are going to graph
         for myline in myfile:
             # print(myline.split()[1])
@@ -37,7 +37,7 @@ def data(r):  # this argument is for the total lines which are within the log.la
     while k < 4:  # this loop selects a k-column
         while i < r + 92:  # this loop selects the lines, it always begin with 91 (it depends with the file log.lammps)
 
-            #mylines[i].split()[k]
+            # mylines[i].split()[k]
             if k == 0:
                 temp.append(int(mylines[i].split()[k]))  # so i create a new array for the temp steps
 
