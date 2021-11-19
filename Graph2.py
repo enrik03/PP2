@@ -63,7 +63,7 @@ def data(
 # the run is the final step, and the simulation run until 100000
 def stp(run,
         thermo):  # with this ratio we have the final step, thermo is like the separation, every step is thermo*t; t = t + 1 (loop)
-    step_t = run / thermo
+    step_t = run / thermoo
     return data(step_t)
 
 
