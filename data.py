@@ -19,16 +19,16 @@ def data(r): # this argument is for the total lines which are within the log.lam
 
             #print(mylines[i].split()[k])
             if k == 0:
-                temp.append(mylines[i].split()[k]) # so i create a new array for the temp steps
+                temp.append(int(mylines[i].split()[k])) # so i create a new array for the temp steps
                 
             elif k == 1:
-                kee.append(mylines[i].split()[k]) # this array is for the kinetic energy
+                kee.append(float(mylines[i].split()[k])) # this array is for the kinetic energy
                 
             elif k == 2:
-                pee.append(mylines[i].split()[k]) # this is for the potential
+                pee.append(float(mylines[i].split()[k])) # this is for the potential
                 
             elif k == 3:
-                total.append(mylines[i].split()[k]) # total energy array
+                total.append(float(mylines[i].split()[k])) # total energy array
                 
             i = i + 1
         k = k + 1
