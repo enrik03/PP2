@@ -1,0 +1,36 @@
+variable x equal 1.0
+
+if "step = 5000" then " x = 0 "
+
+variable ramp equal ramp(1,0)
+fix rwall1 gsoluto wall/lj126 xlo 7.0 x 1.0 1.5 pbc yes
+
+variable ramp equal ramp(1,0)
+fix rwall1 gsoluto wall/lj126 xlo 7.0 v_ramp 1.0 1.5 pbc yes
+
+variable linear equal vdisplace(0,20)
+fix 1 all wall xlo v_linear 1.0 1.0 2.5
+
+
+
+fix    rwall1 gsoluto wall/lj126 xlo 7 1.0 1.0 1.5 pbc yes
+fix    rwall2 gsoluto wall/lj126 xhi 12 1.0 1.0 1.5 pbc yes
+
+label       loop
+variable    a loop 5
+print       "A = $a"
+if          "$a > 2" then "jump in.script break"
+next        a
+jump        in.script loop
+label       break
+variable    a delete
+--------------------------------------------
+variable myTemp equal temp
+label loop
+variable a loop 1000
+run 1000
+if "${myTemp} < 300.0" then "jump SELF break"
+next a
+jump SELF loop
+label break
+print "ALL DONE"
