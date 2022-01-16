@@ -12,3 +12,7 @@ I also put a write.data file to print the postion at time t = 0, and the velocit
 The log.lammps file has the general information.
 
 See the Leanord Jones potential that is used here: https://en.wikipedia.org/wiki/Lennard-Jones_potential
+
+
+
+![Example_Energy_D Coefficient_Graph](https://user-images.githubusercontent.com/90353283/149673432-54067433-e38a-41fe-9348-13b836f37467.png)
