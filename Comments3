@@ -1,6 +1,0 @@
-Bound the simulation domain on one or more of its faces with a flat wall that interacts with the atoms in the group by generating a force on the atom in a direction perpendicular to the wall. The energy of wall-particle interactions depends on the style.
-
-New fun. (fix wall/lj126)
-
-
-https://docs.lammps.org/fix_wall.html#fix-wall-lj126-command
