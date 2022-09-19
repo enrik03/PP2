@@ -18,6 +18,28 @@ https://docs.lammps.org/dump.html
 
 https://www.ks.uiuc.edu/Research/vmd/
 
+Interactions:
+pair_style    lj/cut 2.5 
+
+pair_coeff    1 1 1.0  1.0
+pair_coeff    1 2 1.41 1.0
+pair_coeff    2 2 2.0  1.0
+mass          1 1.0
+mass          2 1.0
+
+
+R_cut = 2.5
+
+Sigma  = 1.0 
+
+Epsilons:
+A - A:   = 1.0 
+A - B:   = 1.41 
+B - B:   = 2.0 
+
+mass = 1.0
+
+
 
 
 
